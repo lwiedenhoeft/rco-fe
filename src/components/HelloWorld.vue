@@ -33,8 +33,15 @@ export default {
   },
   data() {
     return {
-      opening: null,
-      randomNumber: 1,
+      opening: [
+  {
+    "Eco": "A00",
+    "Name": "Amar Gambit",
+    "Pgn": "1. Nh3 d5 2. g3 e5 3. f4 Bxh3 4. Bxh3 exf4",
+    "Uci": "g1h3 d7d5 g2g3 e7e5 f2f4 c8h3 f1h3 e5f4",
+    "Epd": "rn1qkbnr/ppp2ppp/8/3p4/5p2/6PB/PPPPP2P/RNBQK2R w KQkq -"
+  }],
+      randomNumber: 0,
     };
   },
   async created() {
@@ -46,7 +53,7 @@ export default {
   },
   methods: {
     randomOpeningNumber: function () {
-      this.randomNumber = Math.floor(Math.random() * (3396 - 1 + 1) + 1); //multiply to generate random number between 0, 100
+      this.randomNumber = Math.floor(Math.random() * (3396) + 1); //multiply to generate random number between 0, 100
     },
   },
 };
